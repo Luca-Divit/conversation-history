@@ -1,2 +1,12 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<div class="container">
+  <p>Status: <%= @project.status.humanize %></p>
+  <h1><%= @project.name %></h1>
+  <p>Description: <%= @project.description %></p>
+
+
+  <h2>Comments</h2>
+
+  <%= render @project.comments %>
+
+  <%# <%= render 'comments/form', project: @project %> %>
+</div>
