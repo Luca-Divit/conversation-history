@@ -1,2 +1,39 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<div class="home--background">
+  <div class="form--wrapper">
+
+    <h1 class="ps-5">New Project</h1>
+
+    <%= form_with(model: @project, local: true, class: "ps-5") do |form| %>
+
+      <div class="field inline--grid mb-3">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="field inline--grid mb-3">
+        <%= form.label :description %>
+        <%= form.text_field :description %>
+      </div>
+      <br>
+      <div class="field mb-3">
+        <%= form.label :status %>
+        <%= form.select :status, Project.statuses.keys.map { |s| [s.humanize, s] } %>
+      </div>
+
+      <div class="actions mb-3">
+        <%= form.submit class: "btn btn-primary" %>
+      </div>
+    <% end %>
+      <% if @project.errors.any? %>
+        <div id="error_explanation" class="ps-5">
+          <h2 class=""><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+          <ul>
+            <% @project.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+  </div>
+</div>
