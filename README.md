@@ -7,4 +7,5 @@ The app can then be found in `localhost:3000` just type it in your favourite bro
 
 Conversation History is a simple Project managment app which allows you to create/update a Project as well as leave comments.
 
-Thank you for your time in reading this. Hope you'll have a nice day!
+Thank you for your time in reading this.
+Hope you'll have a nice day!
