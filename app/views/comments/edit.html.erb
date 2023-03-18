@@ -1,0 +1,11 @@
+<div class="home--background">
+  <div class="form--wrapper">
+
+    <h1 class="ps-5">Edit comment</h1>
+
+    <%= simple_form_for(@comment) do |f| %>
+      <%= f.input :content %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

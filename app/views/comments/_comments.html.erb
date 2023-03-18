@@ -18,7 +18,7 @@
         <td><%= comment.created_at.strftime("%a %e %b %l %M %p") %></td>
         <% if comment.user == current_user %>
           <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
-          <td><%= link_to '🗑️', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to '🗑️', comment_path(comment), data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } %></td>
         <% end %>
       </tr>
     <% end %>
