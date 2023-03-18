@@ -1,2 +1,18 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<div class="show--background">
+  <div class="d-flex justify-content-between">
+    <%= link_to "<< Back", projects_path %>
+    <%= form_tag project_path(@project), class: "me-3 mt-1", method: :patch do %>
+      <%= submit_tag "Change status" %>
+      <%= select_tag :status, raw("<option>in_progress</option><option>completed</option><option>on_hold</option><option>cancelled</option><option>pending</option>") %>
+    <% end %>
+  </div>
+  <div class="container">
+    <p>Status: <%= @project.status.humanize %></p>
+    <h1><%= @project.name %></h1>
+    <p>Description: <%= @project.description %></p>
+
+    <%= render 'comments/comments', locals: {project: @project} %>
+
+    <%= render 'comments/form', project: @project %>
+  </div>
+</div>

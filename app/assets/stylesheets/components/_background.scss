@@ -1,15 +1,18 @@
-// Specific CSS for your home-page
-.home--background {
+.show--background {
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0.6) 100%), image-url("background.avif");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 100vh;
   color: white;
-  display: flex;
   align-items: center;
 }
 
-.home--background h1, .home--background p {
-  text-shadow: 0 0 1.5rem white;
+.show--background {
+  a {
+    color: white;
+  }
+  a:hover {
+    text-shadow: 0 0 10px black;
+  }
 }
