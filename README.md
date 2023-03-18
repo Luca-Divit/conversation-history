@@ -1,7 +1,7 @@
 This app has been created using Rails 7.0.4
 
-To open the file clone the repo using the 'git clone <ssh link>` command in your terminal
-then type `bundle install` -> `yarn install` -> rails db:create db:migrate and finally `bin/dev`.
+To open the file clone the repo using the command `git clone <ssh link>` in your terminal
+then type `bundle install` -> `yarn install` -> `rails db:create db:migrate` and finally `bin/dev`.
 
 The app can then be found in `localhost:3000` just type it in your favourite browser.
 
