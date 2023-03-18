@@ -29,6 +29,11 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update({ status: params[:status] })
+      Comment.create(
+        content: "Chanaged the status to: #{@project.status.humanize}",
+        user: current_user,
+        project: @project
+      )
       redirect_to project_path(@project), notice: "Project was successfully updated."
     else
       render :edit, status: :unprocessable_entity
