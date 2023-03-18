@@ -5,7 +5,7 @@ then type `bundle install` -> `yarn install` -> `rails db:create db:migrate` and
 
 The app can then be found in `localhost:3000` just type it in your favourite browser.
 
-Conversation History is a simple Project managment app which allows you to create/update a Project as well as leave comments.
+Conversation History is a simple Project management app which allows you to create/update a Project as well as leave comments.
 
 Thank you for your time in reading this.
 Hope you'll have a nice day!
