@@ -1,0 +1,28 @@
+<h1>Comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Content</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.user.name %></td>
+        <td><%= comment.content %></td>
+        <td><%= comment.created_at.strftime("%a %e %b %l %M %p") %></td>
+        <% if comment.user == current_user %>
+          <td><%= link_to 'Edit', edit_comment_path(comment) %></td>
+          <td><%= link_to '🗑️', comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

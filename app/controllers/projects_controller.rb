@@ -7,6 +7,7 @@ class ProjectsController < ApplicationController
 
   def show
     @comment = Comment.new
+    @comments = Comment.where(project: @project)
   end
 
   def new
@@ -27,10 +28,10 @@ class ProjectsController < ApplicationController
   end
 
   def update
-    if @project.update(project_params)
-      redirect_to @project, notice: "Project was successfully updated."
+    if @project.update({ status: params[:status] })
+      redirect_to project_path(@project), notice: "Project was successfully updated."
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
