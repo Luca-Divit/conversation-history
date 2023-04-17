@@ -9,3 +9,5 @@ Conversation History is a simple Project management app which allows you to crea
 
 Thank you for your time in reading this.
 Hope you'll like it and have a nice day!
+
+<p align="center"><a href="https://hits.sh/github.com/Luca-Divit/conversation-history/"><img alt="Hits" src="https://hits.sh/github.com/Luca-Divit/conversation-history.svg?style=plastic&label=Visitors&extraCount=32&color=007ec6"/></a></p>
